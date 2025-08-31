@@ -3,7 +3,7 @@ This project is a powerful, real-time social listening bot that monitors Reddit 
 
 It's designed to be a lightweight, serverless-style script that can be run continuously to keep you informed about conversations relevant to your brand, product, or interests.
 
-✨ Key Features
+Key Features
 Real-time Monitoring: Listens to a live stream of comments from multiple subreddits simultaneously.
 
 High-Accuracy Sentiment Analysis: Uses a pre-trained BERT model (DistilBERT) from Hugging Face for nuanced and context-aware sentiment analysis (Positive/Negative).
@@ -14,21 +14,21 @@ Easy Configuration: All settings, including API keys, keywords, and target subre
 
 No Database Required: Operates as a pure real-time alerting tool, making it simple and dependency-free.
 
-⚙️ How It Works
+How It Works
 The bot operates in a continuous four-step cycle:
 
-Listen 👂: Connects to the Reddit API and monitors a live stream of new comments across a list of specified subreddits.
+Listen : Connects to the Reddit API and monitors a live stream of new comments across a list of specified subreddits.
 
-Detect 🔎: Scans the text of each comment to see if it contains any of your predefined keywords.
+Detect : Scans the text of each comment to see if it contains any of your predefined keywords.
 
-Analyze 🧠: If a match is found, the comment's text is sent to the loaded BERT model, which returns a sentiment (Positive/Negative) and a confidence score.
+Analyze : If a match is found, the comment's text is sent to the loaded BERT model, which returns a sentiment (Positive/Negative) and a confidence score.
 
-Alert 🔔: Formats the keyword, comment details, author, and sentiment analysis into a message and sends it to your designated Slack channel.
+Alert : Formats the keyword, comment details, author, and sentiment analysis into a message and sends it to your designated Slack channel.
 
-📸 Example Slack Alert
+Example Slack Alert
 Here is an example of what the notification looks like in Slack:
 
-🔔 New Reddit Mention (BERT Analysis)!
+New Reddit Mention (BERT Analysis)!
 
 Keyword: story
 Subreddit: r/AskReddit
@@ -88,7 +88,7 @@ REDDIT_PASSWORD="your_reddit_password"
 SLACK_CHANNEL="#your-alerts-channel-name"
 SLACK_BOT_TOKEN="xoxb-your-long-slack-bot-token"
 
-🚀 Usage
+Usage
 Once the setup is complete, you can start the bot with a single command.
 
 1. Customize Your Search
@@ -107,5 +107,5 @@ The first time you run the script, it will download the BERT model from Hugging 
 
 The bot will then start listening for comments. You can stop it at any time by pressing CTRL+C.
 
-📜 License
+License
 This project is licensed under the MIT License. See the LICENSE file for details.
